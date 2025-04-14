@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <!-- Logo da PUC -->
+        <ImageView
+            android:id="@+id/pucLogo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/logo_puc"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Card Principal -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:elevation="4dp"
+            android:padding="24dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp"
+            android:layout_marginHorizontal="8dp"
+            android:backgroundTint="#FFFFFF">
+
+            <!-- Título da Tela -->
+            <TextView
+                android:id="@+id/riskTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registrar o Risco"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Campo de descrição do risco -->
+            <EditText
+                android:id="@+id/riskDescription"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:hint="Descreva o risco identificado..."
+                android:background="@drawable/edit_text_background"
+                android:padding="12dp"
+                android:gravity="top"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Botão para tirar foto e capturar localização -->
+            <Button
+                android:id="@+id/takePhotoButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tirar Foto e Capturar Localização"
+                android:backgroundTint="#0066CC"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Botão para registrar o risco -->
+            <Button
+                android:id="@+id/registerRiskButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enviar Risco"
+                android:backgroundTint="#0066CC"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
