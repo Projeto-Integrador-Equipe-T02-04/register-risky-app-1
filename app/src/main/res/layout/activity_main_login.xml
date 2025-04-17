@@ -21,7 +21,7 @@
         android:id="@+id/loginTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bem-vindo ao PUC Safe"
+        android:text="Bem-vindo ao PUC Work Safe"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#212121"
@@ -39,10 +39,10 @@
         app:hintTextColor="#1976D2">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/RFInput"
+            android:id="@+id/emailInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Registro de Funcionário"
+            android:hint="Email"
             android:textColor="#212121"
             android:backgroundTint="#E0E0E0"
             android:padding="12dp" />
