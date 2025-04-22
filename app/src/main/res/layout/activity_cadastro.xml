@@ -21,12 +21,32 @@
         android:id="@+id/loginTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bem-vindo ao PUC Work Safe"
+        android:text="Realize seu cadastro"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#212121"
         android:layout_gravity="center"
         android:layout_marginBottom="32dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/usernameInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="#1976D2"
+        app:hintTextColor="#1976D2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/usernameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome de usuário"
+            android:textColor="#212121"
+            android:backgroundTint="#E0E0E0"
+            android:padding="12dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <!-- Campo de Email -->
     <com.google.android.material.textfield.TextInputLayout
@@ -70,12 +90,11 @@
             android:padding="12dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Botão de Login -->
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/cadButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Entrar"
+        android:text="Cadastrar"
         android:textSize="16sp"
         android:textAllCaps="false"
         android:backgroundTint="#1976D2"
@@ -85,10 +104,10 @@
         android:layout_marginBottom="16dp" />
 
     <Button
-        android:id="@+id/cadButton"
+        android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cadastro"
+        android:text="Retornar ao login"
         android:textSize="16sp"
         android:textAllCaps="false"
         android:backgroundTint="#1976D2"
