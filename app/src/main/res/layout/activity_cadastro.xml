@@ -10,15 +10,15 @@
 
     <!-- Cabeçalho com ícone e título -->
     <ImageView
-        android:id="@+id/loginIcon"
+        android:id="@+id/pucLogo"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:src="@drawable/logo_puc"
-        android:contentDescription="Imagem de Login" />
+        android:contentDescription="Imagem de Cadastro" />
 
     <TextView
-        android:id="@+id/loginTitle"
+        android:id="@+id/CadTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Realize seu cadastro"
