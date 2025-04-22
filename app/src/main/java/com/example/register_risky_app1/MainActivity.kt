@@ -7,6 +7,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import com.google.firebase.FirebaseApp
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
     private lateinit var emailInputLayout: TextInputLayout
@@ -16,8 +18,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var loginButton: Button
     private lateinit var registerButton: Button
 
+    private val auth = FirebaseAuth.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        FirebaseApp.initializeApp(this)
         setContentView(R.layout.activity_main_login)
 
         emailInputLayout = findViewById(R.id.emailInputLayout)
@@ -54,9 +59,21 @@ class MainActivity : AppCompatActivity() {
             return
         } else {
             passwordInputLayout.error = null
-        }
+       }
 
-        Toast.makeText(this, "Login bem-sucedido", Toast.LENGTH_SHORT).show()
-
+        login(email, password)
     }
+
+    private fun login(email: String, senha: String) {
+        auth.signInWithEmailAndPassword(email, senha)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val user = auth.currentUser
+                    Toast.makeText(this, "Logado como: ${user?.email}", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "Erro: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+    }
+
 }

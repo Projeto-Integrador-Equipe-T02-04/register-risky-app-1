@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "674407715207",
+    "project_id": "projeto-integrador-3-sem-3343b",
+    "storage_bucket": "projeto-integrador-3-sem-3343b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674407715207:android:37f535c0bfbe3e3c8f4322",
+        "android_client_info": {
+          "package_name": "com.example.register_risky_app1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "674407715207-mo9drscn4tejn5n0t94gcs5f5krlbkh7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQMb72qsE7107mi6dM-fzflhcg0aYaUhI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "674407715207-mo9drscn4tejn5n0t94gcs5f5krlbkh7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
