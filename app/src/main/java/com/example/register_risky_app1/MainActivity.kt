@@ -1,5 +1,6 @@
 package com.example.register_risky_app1
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
@@ -34,6 +35,12 @@ class MainActivity : AppCompatActivity() {
 
         loginButton.setOnClickListener {
             validateInput()
+        }
+
+        registerButton.setOnClickListener {
+            val intent = Intent(this, RegisterUserActivity::class.java)
+            startActivity(intent)
+            finish() // fecha a tela de login
         }
     }
 
@@ -70,10 +77,17 @@ class MainActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     val user = auth.currentUser
                     Toast.makeText(this, "Logado como: ${user?.email}", Toast.LENGTH_SHORT).show()
+
+                    // Ir para a RegisterRiskActivity
+                    val intent = Intent(this, RegisterRiskActivity::class.java)
+                    intent.putExtra("email", user?.email) // se quiser usar o e-mail na segunda tela
+                    startActivity(intent)
+                    finish() // fecha a tela de login
                 } else {
                     Toast.makeText(this, "Erro: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
                 }
             }
     }
+
 
 }

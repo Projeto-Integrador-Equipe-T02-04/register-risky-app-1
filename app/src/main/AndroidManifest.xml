@@ -22,5 +22,6 @@
         </activity>
 
         <activity android:name=".RegisterRiskActivity" android:exported="true" />
+        <activity android:name=".RegisterUserActivity" android:exported="true" />
     </application>
 </manifest>

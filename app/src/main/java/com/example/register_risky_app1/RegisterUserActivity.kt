@@ -1,5 +1,6 @@
 package com.example.register_risky_app1
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -28,6 +29,24 @@ class RegisterUserActivity : AppCompatActivity() {
         senhaInput = findViewById(R.id.passwordInput)
         registerUser = findViewById(R.id.cadButton)
         returnLogin = findViewById(R.id.loginButton)
+        returnLogin.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish() // fecha a tela de login
+        }
+        registerUser.setOnClickListener {
+            val email = emailInput.text.toString().trim()
+            val senha = senhaInput.text.toString().trim()
+
+            if (email.isEmpty() || senha.isEmpty()) {
+                Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            createUser(email, senha)
+
+        }
+
 
     }
 
